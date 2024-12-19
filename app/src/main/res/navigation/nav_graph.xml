@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/TopicFragment">
+
+    <fragment
+        android:id="@+id/TopicFragment"
+        android:name="ru.application.recyclerview.topic.TopicFragment"
+        android:label="@string/topic_fragment_label"
+        tools:layout="@layout/fragment_topic">
+        <action
+            android:id="@+id/action_TopicFragment_to_CourseFragment"
+            app:destination="@id/CourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CourseFragment"
+        android:name="ru.application.recyclerview.course.CourseFragment"
+        android:label="@string/course_fragment_label"
+        tools:layout="@layout/fragment_course">
+        <action
+            android:id="@+id/action_CourseFragment_to_TopicFragment"
+            app:destination="@id/TopicFragment" />
+    </fragment>
+</navigation>
